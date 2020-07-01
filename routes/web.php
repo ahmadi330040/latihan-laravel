@@ -12,9 +12,25 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('coba');
 });
 
-Route::get('/test', function(){
-    return 'OK';
+Route::get('/test/{angka}', function($angka){
+    return view('test', ["angka" => $angka]);
 });
+
+Route::get('/signup', function(){
+    return view('signup');
+});
+
+Route::get('/hallo/{nama}', function($nama){
+    return "Hallo $nama";
+});
+
+Route::get('/form', 'RegisterController@form');
+
+Route::get('/sapa', 'RegisterController@sapa');
+Route::post('/sapa', 'RegisterController@sapa_post');
+
+// Route::coba('/coba', 'RegisterController@coba');
+
