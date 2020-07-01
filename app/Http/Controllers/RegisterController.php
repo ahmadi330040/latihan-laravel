@@ -18,9 +18,11 @@ class RegisterController extends Controller
 
     public function sapa_post(Request $request){
         //dd($request->all());
+        $selamat = "<h1>Selamat Datang </h1>";
+        $selamat1 = "<h2>Terimakasih telah bergabung di sanberbook. Social Media kita bersama!</h2>";
         $nama = $request["nama"];
         $nama_akhir = $request["nama_akhir"];
-        return "$nama" . " $nama_akhir";
+        return "$selamat"."$nama" . " $nama_akhir" . "<br>" . "$selamat1";
     }
 
     public function signup(){
