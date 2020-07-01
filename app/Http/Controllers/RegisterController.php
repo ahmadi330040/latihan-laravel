@@ -19,6 +19,11 @@ class RegisterController extends Controller
     public function sapa_post(Request $request){
         //dd($request->all());
         $nama = $request["nama"];
-        return "$nama";
+        $nama_akhir = $request["nama_akhir"];
+        return "$nama" . " $nama_akhir";
+    }
+
+    public function signup(){
+        return view('signup');
     }
 }

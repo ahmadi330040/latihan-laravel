@@ -11,12 +11,13 @@
 			<h4>Sign Up Form</h4>
 		</div>
 
-		<form method="post" action="welcome.html">
+		<form action="/sapa" method="POST">
+		@csrf
 			<label for="nama_awal">First Name</label> <br> <br>
-			<input type="text" placeholder="" id="nama_awal">
+			<input type="text" placeholder="" id="nama_awal" name="nama">
 			<br> <br>
 			<label for="nama_akhir">Last Name</label> <br> <br>
-			<input type="text" placeholder="" id="nama_akhir">
+			<input type="text" placeholder="" id="nama_akhir" name="nama_akhir">
 			<br> <br>
 			<label>Gender </label>
 			<br> <br>
